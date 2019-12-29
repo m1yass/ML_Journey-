@@ -7,8 +7,8 @@ Created on Sun Dec 29 19:16:22 2019
 
 import tweepy 
 from textblob import TextBlob
-
-consumer_key = ''
+#below 4 lines are from the twitter developers application 
+consumer_key = '' 
 consumer_secret = ''
 
 access_token  = ''
@@ -20,7 +20,8 @@ auth.set_access_token(access_token, access_token_secret)
 
 api = tweepy.API(auth)
 
-public_tweets = api.search('Lebanon')
+#the text you want to search in twitter 
+public_tweets = api.search('type-the-text-here')
 
 for tweet in public_tweets: 
     print(tweet.text)
